@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace MVVMListView
+namespace WPFMVVMListView
 {
     /// <summary>
     /// Interaction logic for App.xaml

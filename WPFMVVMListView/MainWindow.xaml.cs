@@ -8,17 +8,24 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFMVVMListView.Models;
+using WPFMVVMListView.VM;
 
-namespace MVVMListView
+namespace WPFMVVMListView
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private HobbyViewModel viewModel;
+
         public MainWindow()
         {
             InitializeComponent();
+            viewModel = new HobbyViewModel();
+            DataContext = viewModel;
+            Loaded += viewModel.HobbiesView_Loaded;
         }
     }
 }

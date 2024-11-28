@@ -1,0 +1,17 @@
+﻿<Application x:Class="WPFMVVMListView.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WPFMVVMListView"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Button.xaml"/>
+                <ResourceDictionary Source="Theme/TextBlock.xaml"/>
+                <ResourceDictionary Source="Theme/TextBox.xaml"/>
+                <ResourceDictionary Source="Theme/ListView.xaml"/>
+                <ResourceDictionary Source="Theme/ListViewItem.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

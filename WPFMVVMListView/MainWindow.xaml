@@ -1,0 +1,45 @@
+﻿<Window x:Class="WPFMVVMListView.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Hobbies" Height="450" Width="800"
+        Background="#1f1f1f">
+    
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,0,10">
+            <Button Style ="{StaticResource Button}" Content="Add New Hobby" Command="{Binding AddCommand}"/>
+            <Button Style ="{StaticResource Button}" Content="Delete Selected Hobby" Command="{Binding DeleteCommand}"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Margin="0,30,0,0">
+            <TextBlock Style="{StaticResource TextBlock}" Text="Hobbies"/>
+            <ListView Style="{StaticResource ListView}"  ItemsSource="{Binding Hobbies}" SelectedItem="{Binding SelectedHobby}">
+                <ListView.ItemContainerStyle>
+                    <StaticResource ResourceKey="ListViewItem"/>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,30,0,0">
+            <TextBlock Style="{StaticResource TextBlock}" Text="Hobby Details"/>
+            <TextBlock Style="{StaticResource TextBlock}" Text="Name" FontWeight="Bold"/>
+            <TextBox Style ="{StaticResource TextBox}" Text="{Binding SelectedHobby.Name, Mode=TwoWay}" />
+            <TextBlock Style="{StaticResource TextBlock}" Text="Description" FontWeight="Bold"/>
+            <TextBox Style ="{StaticResource TextBox}" Text="{Binding SelectedHobby.Description, Mode=TwoWay}" AcceptsReturn="True" Height="150"/>
+        </StackPanel>
+    </Grid>
+</Window>
