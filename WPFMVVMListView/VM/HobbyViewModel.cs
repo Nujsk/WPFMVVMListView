@@ -35,7 +35,7 @@ namespace WPFMVVMListView.VM
 
         public HobbyViewModel()
         {
-            hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Knitting", Description = "Very exciting stuff" }));
+            hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Knitting", Description = "Very exciting stuff." }));
             hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Baking", Description = "Not as exciting as knitting, but not bad" }));
             hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Painting", Description = "I love watching paint dry :)" }));
 
