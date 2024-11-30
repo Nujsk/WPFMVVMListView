@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using WPFMVVMListView.Command;
 using WPFMVVMListView.Models;
@@ -41,7 +35,7 @@ namespace WPFMVVMListView.VM
 
         public HobbyViewModel()
         {
-            hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Knitting", Description = "Very exciting stuff"}));
+            hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Knitting", Description = "Very exciting stuff" }));
             hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Baking", Description = "Not as exciting as knitting, but not bad" }));
             hobbies.Add(new HobbyItemViewModel(new Hobby() { Name = "Painting", Description = "I love watching paint dry :)" }));
 
@@ -59,7 +53,7 @@ namespace WPFMVVMListView.VM
 
         private void AddHobby(object? parameter)
         {
-            Hobby hobby = new() { Name = "new" };
+            Hobby hobby = new() { Name = string.Empty, Description = string.Empty };
             var hobbyVM = new HobbyItemViewModel(hobby);
             Hobbies.Add(hobbyVM);
             SelectedHobby = hobbyVM;

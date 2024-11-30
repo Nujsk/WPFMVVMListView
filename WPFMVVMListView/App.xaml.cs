@@ -9,6 +9,7 @@ namespace WPFMVVMListView
     /// </summary>
     public partial class App : Application
     {
+
     }
 
 }

@@ -35,10 +35,10 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Margin="20,30,0,0">
-            <TextBlock Style="{StaticResource TextBlock}" Text="Hobby Details"/>
-            <TextBlock Style="{StaticResource TextBlock}" Text="Name" FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBlock}" Text="Hobby Details" FontSize="25"/>
+            <TextBlock Style="{StaticResource TextBlock}" Text="Name"/>
             <TextBox Style ="{StaticResource TextBox}" Text="{Binding SelectedHobby.Name, Mode=TwoWay}" />
-            <TextBlock Style="{StaticResource TextBlock}" Text="Description" FontWeight="Bold"/>
+            <TextBlock Style="{StaticResource TextBlock}" Text="Description"/>
             <TextBox Style ="{StaticResource TextBox}" Text="{Binding SelectedHobby.Description, Mode=TwoWay}" AcceptsReturn="True" Height="150"/>
         </StackPanel>
     </Grid>
